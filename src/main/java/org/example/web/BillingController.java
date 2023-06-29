@@ -24,7 +24,9 @@ public class BillingController
   @ResponseBody
   public String invoice()
   {
-    final Invoice invoice = billingService.generateInvoice();
+    final Invoice invoice = billingService.generateInvoice("AB","23");
+    final Invoice invoice2 = billingService.generateInvoice("RQ","23");
+    final Invoice invoice3 = billingService.generateInvoice("AB","23");
 
     return "<!DOCTYPE html>"
         + "<html>"
@@ -38,6 +40,8 @@ public class BillingController
         + "  <body>"
         + "    <div id='container'>"
         + "      <h3>" + invoice.getCode() + "</h3>"
+        + "      <h3>" + invoice2.getCode() + "</h3>"
+        + "      <h3>" + invoice3.getCode() + "</h3>"
         + "    </div>"
         + "  </body>"
         + "</html>";

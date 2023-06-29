@@ -1,11 +1,11 @@
 package org.example.data;
 
-import org.example.domain.Sequence;
+import org.example.domain.SequenceLost;
 
 /**
  * Contract for data access operations on {@link Sequence}.
  */
-public interface SequenceRepository extends ModelRepository<Sequence> {
+public interface SequenceLostRepository extends ModelRepository<SequenceLost> {
 
 	/**
 	 * Finds a sequence with a specified name.
@@ -14,6 +14,6 @@ public interface SequenceRepository extends ModelRepository<Sequence> {
 	 * @return A {@link Sequence} if one with the specified name is found,
 	 *         {@code null} otherwise.
 	 */
-	Sequence findByName(String name);
+	SequenceLost findTopByName(String name);
 	
 }

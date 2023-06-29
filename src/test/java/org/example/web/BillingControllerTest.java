@@ -64,6 +64,6 @@ public class BillingControllerTest
   {
     mock.perform(get("/"))
         .andExpect(status().isOk())
-        .andExpect(content().contentType("text/html"));
+        .andExpect(content().contentType("text/html;charset=ISO-8859-1"));
   }
 }

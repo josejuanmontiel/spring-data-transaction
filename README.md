@@ -6,6 +6,12 @@ in a typical application.
 * [Declarative transaction management with the `@Transactional` annotation](src/main/java/org/example/service/BillingService.java)
 * [Declarative retry support using Spring Retry](src/main/java/org/example/service/BillingService.java)
 
+// TODO SpringBoot update...
+
+@EnableRetry
+public class Application extends SpringBootServletInitializer {
+
+
 # License
 This sample application and its associated source code in its entirety is being made
 available under the following licensing terms.
